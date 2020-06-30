@@ -10,7 +10,9 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "author": "",
   "license": "ISC",
@@ -21,5 +23,6 @@
   "dependencies": {
     "express": "^4.16.3",
     "if-env": "^1.0.4"
-  }
+  },
+  "homepage": "https://jkrayg.github.io/googleBook"
 }
