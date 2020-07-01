@@ -1,0 +1,9 @@
+import axios from "axios";
+const BASEURL = "https://www.googleapis.com/books/v1/volumes?+inauthor:"
+const APIKEY = "&key=AIzaSyBpP-n71t2WyJ-wVIjf5BRMqrkt3ti_4_w"
+
+export default {
+  search: function(query) {
+    return axios.get(BASEURL + query + APIKEY);
+  }
+};
