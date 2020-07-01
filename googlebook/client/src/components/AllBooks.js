@@ -1,21 +1,25 @@
-import React, { Component } from "react";
-import SearchBookForm from "./SearchBookForm";
-import API from "../utils/API";
+import React from 'react'
 
-class OmdbContainer extends Component {
-  state = {
-    result: {},
-    search: ""
-  };
+function AllBooks(props) {
+    return (
+        <div style = {booksStyle} className = "all-books">
+            <h4>{props.title}</h4>
+            <p>Author: {props.author.length > 1 ? props.author[0] + " & " + props.author[1] : props.author}</p>
+            <img src = {props.image} alt = "book" />
+        </div>
+        
+        
+    )
+}
 
 
-  componentDidMount() {
-    this.searchAuthor("The Matrix");
-  };
+const booksStyle = {
+    border: "1px solid black",
+    marginBottom: "5px",
+    padding: "10px",
+    textAlign: "center"
+}
 
-  searchAuthor = query => {
-    API.search(query)
-      .then(res => this.setState({ result: res.data }))
-      .catch(err => console.log(err));
-  };
-};
+
+
+export default AllBooks;

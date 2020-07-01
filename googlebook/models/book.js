@@ -6,20 +6,17 @@ var bookSchema = new Schema({
     
     title: {
     type: String,
-    trim: true,
-    required: "Title is Required"
+    trim: true
   },
   
   author: {
     type: String,
-    trim: true,
-    required: true
+    trim: true
   },
   
   description: {
     type: String,
-    trim: true,
-    required: true
+    trim: true
   },
 
   image: {
