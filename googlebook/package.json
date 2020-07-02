@@ -25,7 +25,8 @@
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "jquery": "^3.5.1",
-    "mongoose": "^5.9.20"
+    "mongoose": "^5.9.20",
+    "react-router": "^5.2.0"
   },
   "homepage": "https://jkrayg.github.io/googleBook"
 }
