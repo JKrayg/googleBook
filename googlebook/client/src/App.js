@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SearchBookForm from "./components/SearchBookForm";
 import API from "./utils/API";
+//import $ from 'jquery';
 import "./App.css";
 import AllBooks from "./components/AllBooks"
 import Header from "./components/Header";
@@ -17,10 +18,22 @@ class App extends Component {
     this.searchTitle("the universe");
   }
 
+  makeBook = bookData => {
+    return {
+        _id: bookData.id,
+        title: bookData.volumeInfo.title,
+        authors: bookData.volumeInfo.authors,
+        description: bookData.volumeInfo.description,
+        image: bookData.volumeInfo.imageLinks.thumbnail,
+        link: bookData.volumeInfo.previewLink
+    }
+}
+
   searchTitle = query => {
-    API.search(query)
-      .then(res => this.setState({ result: res.data.items }))
-      .catch(err => console.log(err));
+    API.getBook(query)
+    .then(res => this.setState({ result: res.data.items.map(bookData => this.makeBook(bookData)) }))
+    .catch(err => console.error(err));
+      console.log(this.state.result)
   };
 
 
@@ -64,7 +77,7 @@ class App extends Component {
                   image={results.volumeInfo.imageLinks.thumbnail}
                   link={results.Released}
                   />
-            ))}    
+            ))}
             </div>
           </div>
         </div>

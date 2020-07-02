@@ -4,7 +4,8 @@ function AllBooks(props) {
     return (
         <div style = {booksStyle} className = "all-books">
             <h4>{props.title}</h4>
-            <p>Author: {props.author.length > 1 ? props.author[0] + " & " + props.author[1] : props.author}</p>
+            <p>Authors: {props.author}</p>
+            
             <img src = {props.image} alt = "book" />
         </div>
         
