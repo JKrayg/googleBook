@@ -5,14 +5,21 @@ import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
 import SearchBooks from "./pages/SearchBook";
 import SavedBooks from "./pages/SaveBook";
-
 import "./App.css";
 
 class App extends Component {
  
   render() {
     return (
-      
+      <Router>
+        <Wrapper>
+          <NavBar />
+          <Header />
+          <Route exact path = "/" component = {SearchBooks} />
+          <Route exact path = "/search" component = {SearchBooks} />
+          <Route exact path = "/saved" component = {SavedBooks} />
+        </Wrapper>
+      </Router>
     )
   };
 };

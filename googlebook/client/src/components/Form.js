@@ -3,7 +3,7 @@ import React from 'react'
 function Form(props) {
     return (
         <div>
-            <div className="form-group">
+            <div className="form">
                 <label htmlFor="search"><p>Search for a Book!</p></label>
                 <input
                     onChange={props.handleInputChange}
