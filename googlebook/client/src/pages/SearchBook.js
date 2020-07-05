@@ -10,7 +10,7 @@ class Search extends React.Component {
     }
 
     componentDidMount() {
-        this.searchBook();
+        this.searchBook("computer programming");
     }
 
     newBook = bookData => {
