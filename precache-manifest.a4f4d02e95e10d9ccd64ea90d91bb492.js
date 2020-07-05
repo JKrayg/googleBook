@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "9e026c5d1a5d2edb1b7e",
-    "url": "/googleBook/static/css/main.9a648051.chunk.css"
+    "revision": "178411439583477386a5",
+    "url": "/googleBook/static/css/main.776c1006.chunk.css"
   },
   {
-    "revision": "9e026c5d1a5d2edb1b7e",
-    "url": "/googleBook/static/js/main.89181e1a.chunk.js"
+    "revision": "178411439583477386a5",
+    "url": "/googleBook/static/js/main.f8aba895.chunk.js"
   },
   {
     "revision": "349da4e5aea1e5657ccc",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/googleBook/static/js/2.29007200.chunk.js"
   },
   {
-    "revision": "dd651ef5921b38613f58969185e687d5",
+    "revision": "a0fa5b786b352917e0392a9ebb99ae3b",
     "url": "/googleBook/index.html"
   }
 ];
