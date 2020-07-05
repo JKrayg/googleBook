@@ -16,8 +16,8 @@ class Saved extends Component {
 
     render() {
         return (
-            <div>
-                <h3>Saved Books</h3>
+            <div className = "container">
+                <h3 style = {{marginBottom: "0", marginTop: "20px"}}>Your saved books</h3>
                 <SearchResults books = {this.state.savedBooks} />
             </div>
         )

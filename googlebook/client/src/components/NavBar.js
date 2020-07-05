@@ -4,8 +4,8 @@ import { Link } from "react-router-dom"
 function NavBar() {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg text-light">
-                <div className="container">
+            <nav style = {nav} className="navbar navbar-expand-lg text-light">
+                <div className="container" style = {navStyle}>
                     <Link className="navbar-brand" to="/">Google Books</Link>
                     <ul className="navbar-nav">
                         <li className="nav-item">
@@ -26,4 +26,17 @@ function NavBar() {
         </div>
     )
 }
+
+const navStyle = {
+    backgroundColor: "lightgrey",
+    height: "100px",
+    borderBottomLeftRadius: "5px",
+    borderBottomRightRadius: "5px"
+}
+
+const nav = {
+    padding: "0",
+    
+}
+
 export default NavBar;

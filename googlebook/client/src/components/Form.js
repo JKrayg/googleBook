@@ -3,20 +3,26 @@ import React from 'react'
 function Form(props) {
     return (
         <div>
-            <div className="form">
-                <label htmlFor="search"><p>Search for a Book!</p></label>
+            <div style = {formStyle} className="form">
                 <input
                     onChange={props.handleInputChange}
                     value={props.search}
                     name="search"
                     type="text"
                     className="form-control"
-                    placeholder="Search by Title..."
+                    placeholder="Search by title..."
                     id="search"
                 />
-                <button onClick={props.handleFormSubmit} className="btn btn-primary">Search</button>
+                <button style = {{marginTop: "10px"}} onClick={props.handleFormSubmit} className="btn btn-primary">Search</button>
             </div>
         </div>
     )
+}
+
+const formStyle = {
+    borderRadius: "5px",
+    backgroundColor: "rgba(12, 122, 240, 0.502)",
+    padding: "10px",
+    marginTop: "20px"
 }
 export default Form;
