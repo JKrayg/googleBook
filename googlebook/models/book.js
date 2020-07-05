@@ -3,30 +3,25 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var bookSchema = new Schema({
-    
-    title: {
-    type: String,
-    trim: true
+
+  title: {
+    type: String
   },
-  
+
   author: {
-    type: String,
-    trim: true
+    type: String
   },
-  
+
   description: {
-    type: String,
-    trim: true
+    type: String
   },
 
   image: {
-      type: String,
-      trim: true
+    type: String
   },
 
   link: {
-    type: String,
-    trim: true
+    type: String
   }
 });
 
